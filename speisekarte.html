@@ -1,78 +1,413 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#0d4637">
-  <title>Speisekarte | NEO FOODS</title>
-  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="theme-color" content="#0d4637">
+<title>Speisekarte | NEO FOODS</title>
+
 <style>
-  :root{
-    --green:#0d4637;
-    --cream:#f6efe1;
-    --orange:#f5822a;
-    --white:#fff;
-  }
-  *{box-sizing:border-box}
-  html,body{margin:0;height:100%;font-family:Arial,Helvetica,sans-serif;background:#1f1f1f}
-  body{display:flex;flex-direction:column}
-  .topbar{
-    min-height:64px;
-    background:var(--green);
-    color:white;
-    display:flex;
-    align-items:center;
-    gap:12px;
-    padding:10px 14px;
-    box-shadow:0 2px 12px rgba(0,0,0,.28);
-    z-index:2;
-  }
-  .topbar .title{
-    font-weight:800;
-    flex:1;
-    text-align:center;
-    font-family:Georgia,"Times New Roman",serif;
-    font-size:21px;
-  }
-  .btn{
-    color:white;
-    text-decoration:none;
-    border:1px solid rgba(255,255,255,.35);
-    border-radius:11px;
-    padding:10px 13px;
-    font-weight:700;
-    white-space:nowrap;
-    background:rgba(255,255,255,.08);
-  }
-  .btn:hover{background:rgba(255,255,255,.16)}
-  .reader{
-    flex:1;
-    min-height:0;
-    background:#333;
-  }
-  iframe{
+:root{
+  --green:#0d4637;
+  --cream:#f6efe1;
+  --orange:#f5822a;
+  --ink:#17382f;
+  --bar-h:64px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;overscroll-behavior:none}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:
+    radial-gradient(circle at 82% 12%,rgba(245,130,42,.13),transparent 24rem),
+    linear-gradient(135deg,#e7e0d4,#fbf6ec);
+  color:var(--ink);
+  overflow:hidden;
+}
+.topbar{
+  height:var(--bar-h);
+  background:var(--green);
+  color:#fff;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:10px;
+  padding:9px 14px;
+  box-shadow:0 3px 18px rgba(0,0,0,.24);
+  position:relative;
+  z-index:20;
+}
+.topbar .title{
+  font-family:Georgia,"Times New Roman",serif;
+  font-weight:700;
+  text-align:center;
+  font-size:22px;
+}
+.btn{
+  border:1px solid rgba(255,255,255,.35);
+  color:#fff;
+  background:rgba(255,255,255,.08);
+  text-decoration:none;
+  border-radius:12px;
+  padding:10px 12px;
+  font-weight:700;
+  cursor:pointer;
+  user-select:none;
+}
+.btn:hover{background:rgba(255,255,255,.16)}
+.stage{
+  height:calc(100vh - var(--bar-h));
+  min-height:0;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px 76px 66px;
+  perspective:1800px;
+  touch-action:pan-y;
+  overflow:hidden;
+}
+.book{
+  width:min(1180px,calc(100vw - 170px));
+  height:min(calc(100vh - 145px),790px);
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  filter:drop-shadow(0 22px 28px rgba(0,0,0,.20));
+  transform-style:preserve-3d;
+}
+.spread{
+  position:absolute;
+  inset:0;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  justify-content:center;
+  align-items:center;
+  opacity:0;
+  visibility:hidden;
+  transform:translateX(10%) rotateY(-9deg) scale(.985);
+  transition:
+    opacity .20s ease,
+    transform .48s cubic-bezier(.22,.8,.22,1),
+    visibility .48s;
+  transform-origin:center center;
+  pointer-events:none;
+}
+.spread.active{
+  opacity:1;
+  visibility:visible;
+  transform:translateX(0) rotateY(0) scale(1);
+  pointer-events:auto;
+}
+.spread.leaving-left{
+  opacity:0;
+  visibility:visible;
+  transform:translateX(-13%) rotateY(15deg) scale(.975);
+}
+.spread.leaving-right{
+  opacity:0;
+  visibility:visible;
+  transform:translateX(13%) rotateY(-15deg) scale(.975);
+}
+.page{
+  height:100%;
+  min-width:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+}
+.page img{
+  height:100%;
+  width:100%;
+  object-fit:contain;
+  display:block;
+  background:white;
+  user-select:none;
+  -webkit-user-drag:none;
+}
+.page.left img{
+  border-radius:15px 2px 2px 15px;
+  box-shadow:inset -14px 0 22px rgba(0,0,0,.08);
+}
+.page.right img{
+  border-radius:2px 15px 15px 2px;
+  box-shadow:inset 14px 0 22px rgba(0,0,0,.08);
+}
+.page.blank{background:transparent}
+.book::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:1.5%;
+  bottom:1.5%;
+  width:22px;
+  transform:translateX(-50%);
+  background:linear-gradient(90deg,transparent,rgba(0,0,0,.13),rgba(255,255,255,.22),rgba(0,0,0,.10),transparent);
+  filter:blur(3px);
+  opacity:.45;
+  pointer-events:none;
+  z-index:5;
+}
+.nav-arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:54px;
+  height:78px;
+  border:0;
+  border-radius:18px;
+  background:rgba(13,70,55,.88);
+  color:white;
+  font-size:42px;
+  line-height:1;
+  cursor:pointer;
+  box-shadow:0 8px 22px rgba(0,0,0,.18);
+  z-index:12;
+}
+.nav-arrow:hover{background:var(--green)}
+.nav-arrow.prev{left:14px}
+.nav-arrow.next{right:14px}
+.nav-arrow:disabled{opacity:.25;cursor:default}
+.bottom-ui{
+  position:absolute;
+  left:50%;
+  bottom:12px;
+  transform:translateX(-50%);
+  display:flex;
+  align-items:center;
+  gap:13px;
+  padding:8px 14px;
+  border-radius:999px;
+  background:rgba(13,70,55,.92);
+  color:#fff;
+  z-index:15;
+  box-shadow:0 6px 18px rgba(0,0,0,.18);
+}
+.dots{display:flex;gap:7px;align-items:center}
+.dot{
+  width:8px;height:8px;border-radius:50%;
+  border:0;padding:0;background:rgba(255,255,255,.4);cursor:pointer
+}
+.dot.active{background:var(--orange);transform:scale(1.25)}
+.counter{font-size:13px;min-width:55px;text-align:center}
+.swipe-hint{
+  position:absolute;
+  bottom:57px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:12px;
+  color:rgba(23,56,47,.72);
+  pointer-events:none;
+  transition:opacity .4s;
+}
+.swipe-hint.hide{opacity:0}
+@media(max-width:720px){
+  :root{--bar-h:58px}
+  .topbar{padding:7px 8px}
+  .topbar .title{font-size:18px}
+  .btn{padding:9px 9px;font-size:13px}
+  .stage{padding:10px 8px 62px}
+  .book{
     width:100%;
-    height:100%;
-    border:0;
-    display:block;
-    background:white;
+    height:calc(100vh - 130px);
+    filter:drop-shadow(0 12px 18px rgba(0,0,0,.18));
   }
-  @media(max-width:560px){
-    .topbar{min-height:58px;padding:8px}
-    .btn{padding:9px 10px;font-size:13px}
-    .topbar .title{font-size:18px}
+  .spread{grid-template-columns:1fr}
+  .spread .page:nth-child(2){display:none}
+  .page img{
+    max-width:100%;
+    border-radius:12px !important;
+    box-shadow:none !important;
   }
+  .book::after{display:none}
+  .nav-arrow{
+    width:42px;height:60px;font-size:34px;border-radius:15px;
+    background:rgba(13,70,55,.76)
+  }
+  .nav-arrow.prev{left:3px}
+  .nav-arrow.next{right:3px}
+  .bottom-ui{bottom:8px}
+  .swipe-hint{bottom:49px}
+}
 </style>
 
 </head>
 <body>
-  <div class="topbar">
-    <a class="btn" href="index.html">← Menü</a>
-    <div class="title">Speisekarte</div>
-    <a class="btn" href="neo_foods_preisliste.pdf" target="_blank" rel="noopener">PDF ↗</a>
+<header class="topbar">
+  <a class="btn" href="index.html">← Menü</a>
+  <div class="title">Speisekarte</div>
+  <a class="btn" href="neo_foods_preisliste.pdf" target="_blank" rel="noopener">PDF ↗</a>
+</header>
+<main class="stage">
+  <button id="prev" class="nav-arrow prev" aria-label="Vorherige Seite">‹</button>
+  <div id="book" class="book" aria-label="Speisekarte zum Durchblättern"></div>
+  <button id="next" class="nav-arrow next" aria-label="Nächste Seite">›</button>
+  <div id="swipeHint" class="swipe-hint">← Wischen zum Blättern →</div>
+  <div class="bottom-ui">
+    <div id="dots" class="dots"></div>
+    <div id="counter" class="counter"></div>
   </div>
-  <div class="reader">
-    <iframe src="neo_foods_preisliste.pdf#page=1" title="Speisekarte PDF"></iframe>
-  </div>
+</main>
+<script>
+window.FLIP_TITLE='Speisekarte';
+window.FLIP_PAGES=['assets/menu-1.webp','assets/menu-2.webp'];
+</script>
+
+<script>
+(() => {
+  const pages = window.FLIP_PAGES || [];
+  const title = window.FLIP_TITLE || "Menü";
+  const isMobile = () => window.matchMedia("(max-width:720px)").matches;
+
+  const book = document.getElementById("book");
+  const prev = document.getElementById("prev");
+  const next = document.getElementById("next");
+  const dots = document.getElementById("dots");
+  const counter = document.getElementById("counter");
+  const hint = document.getElementById("swipeHint");
+
+  let index = 0;
+  let spreads = [];
+  let startX = null, startY = null, animating = false;
+
+  function requestedPage(){
+    const m = location.hash.match(/page=(\d+)/);
+    const p = m ? Math.max(1, parseInt(m[1],10)) : 1;
+    return Math.min(p,pages.length);
+  }
+
+  function build(){
+    book.innerHTML="";
+    dots.innerHTML="";
+    spreads=[];
+
+    if(isMobile()){
+      pages.forEach((src,i)=>{
+        const s=document.createElement("div");
+        s.className="spread";
+        s.innerHTML=`<div class="page right"><img src="${src}" alt="${title} Seite ${i+1}" draggable="false"></div>`;
+        book.appendChild(s); spreads.push(s);
+      });
+      index=requestedPage()-1;
+    }else{
+      for(let i=0;i<pages.length;i+=2){
+        const s=document.createElement("div");
+        s.className="spread";
+        const left=pages[i]
+          ? `<div class="page left"><img src="${pages[i]}" alt="${title} Seite ${i+1}" draggable="false"></div>`
+          : `<div class="page blank"></div>`;
+        const right=pages[i+1]
+          ? `<div class="page right"><img src="${pages[i+1]}" alt="${title} Seite ${i+2}" draggable="false"></div>`
+          : `<div class="page blank"></div>`;
+        s.innerHTML=left+right;
+        book.appendChild(s); spreads.push(s);
+      }
+      index=Math.floor((requestedPage()-1)/2);
+    }
+
+    spreads.forEach((_,i)=>{
+      const d=document.createElement("button");
+      d.className="dot";
+      d.setAttribute("aria-label",`Zu ${isMobile()?"Seite":"Doppelseite"} ${i+1}`);
+      d.onclick=()=>go(i,i>index?1:-1);
+      dots.appendChild(d);
+    });
+    render();
+  }
+
+  function updateUI(){
+    [...dots.children].forEach((d,i)=>d.classList.toggle("active",i===index));
+    prev.disabled=index===0;
+    next.disabled=index===spreads.length-1;
+    if(isMobile()){
+      counter.textContent=`${index+1} / ${pages.length}`;
+    }else{
+      const p1=index*2+1, p2=Math.min(p1+1,pages.length);
+      counter.textContent=p1===p2 ? `${p1} / ${pages.length}` : `${p1}-${p2} / ${pages.length}`;
+    }
+  }
+
+  function render(){
+    spreads.forEach((s,i)=>{
+      s.classList.remove("active","leaving-left","leaving-right");
+      if(i===index) s.classList.add("active");
+    });
+    updateUI();
+  }
+
+  function go(target,dir){
+    target=Math.max(0,Math.min(target,spreads.length-1));
+    if(target===index || animating) return;
+    animating=true;
+
+    const old=spreads[index];
+    old.classList.remove("active");
+    old.classList.add(dir>0?"leaving-left":"leaving-right");
+
+    index=target;
+    const incoming=spreads[index];
+    incoming.style.transition="none";
+    incoming.style.transform=dir>0
+      ? "translateX(13%) rotateY(-15deg) scale(.975)"
+      : "translateX(-13%) rotateY(15deg) scale(.975)";
+    incoming.style.opacity="0";
+    incoming.style.visibility="visible";
+    incoming.offsetHeight;
+    incoming.style.transition="";
+    incoming.style.transform="";
+    incoming.style.opacity="";
+    incoming.style.visibility="";
+    incoming.classList.add("active");
+
+    updateUI();
+    hint.classList.add("hide");
+    setTimeout(()=>{
+      old.classList.remove("leaving-left","leaving-right");
+      animating=false;
+    },500);
+  }
+
+  prev.onclick=()=>go(index-1,-1);
+  next.onclick=()=>go(index+1,1);
+
+  document.addEventListener("keydown",e=>{
+    if(e.key==="ArrowLeft") prev.click();
+    if(e.key==="ArrowRight") next.click();
+  });
+
+  book.addEventListener("pointerdown",e=>{
+    startX=e.clientX; startY=e.clientY;
+  });
+  book.addEventListener("pointerup",e=>{
+    if(startX===null) return;
+    const dx=e.clientX-startX, dy=e.clientY-startY;
+    startX=startY=null;
+    if(Math.abs(dx)>55 && Math.abs(dx)>Math.abs(dy)*1.15){
+      dx<0 ? next.click() : prev.click();
+    }
+  });
+
+  let wheelLock=false;
+  book.addEventListener("wheel",e=>{
+    if(wheelLock) return;
+    if(Math.abs(e.deltaX)>Math.abs(e.deltaY) && Math.abs(e.deltaX)>18){
+      wheelLock=true;
+      e.deltaX>0 ? next.click() : prev.click();
+      setTimeout(()=>wheelLock=false,450);
+    }
+  },{passive:true});
+
+  let resizeTimer;
+  window.addEventListener("resize",()=>{
+    clearTimeout(resizeTimer);
+    resizeTimer=setTimeout(build,180);
+  });
+
+  build();
+})();
+</script>
+
 </body>
 </html>
