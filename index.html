@@ -160,6 +160,18 @@
     }
 
     footer strong{letter-spacing:2px}
+    .legal-links{
+      margin-top:14px;
+      display:flex;
+      justify-content:center;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+    .legal-links a{
+      color:white;
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
 
     @media (max-width:560px){
       .chips{grid-template-columns:1fr}
@@ -187,21 +199,21 @@
       <div class="sub">Frühstück · Croissants · Salate · Desserts</div>
 
       <div class="chips">
-        <a class="chip" href="neo_foods_preisliste.pdf#page=1" target="_blank">
+        <a class="chip" href="neo_foods_preisliste.pdf#page=1" target="_blank" rel="noopener">
           <span>Frühstück</span><span>→</span>
         </a>
-        <a class="chip" href="neo_foods_preisliste.pdf#page=1" target="_blank">
+        <a class="chip" href="neo_foods_preisliste.pdf#page=1" target="_blank" rel="noopener">
           <span>Croissants</span><span>→</span>
         </a>
-        <a class="chip" href="neo_foods_preisliste.pdf#page=1" target="_blank">
+        <a class="chip" href="neo_foods_preisliste.pdf#page=1" target="_blank" rel="noopener">
           <span>Salate</span><span>→</span>
         </a>
-        <a class="chip" href="neo_foods_preisliste.pdf#page=2" target="_blank">
+        <a class="chip" href="neo_foods_preisliste.pdf#page=2" target="_blank" rel="noopener">
           <span>Desserts</span><span>→</span>
         </a>
       </div>
 
-      <a class="chip full" href="neo_foods_preisliste.pdf#page=1" target="_blank">
+      <a class="chip full" href="speisekarte.html">
         <span>Komplette Speisekarte öffnen</span><span>→</span>
       </a>
     </section>
@@ -211,7 +223,7 @@
       <div class="sub">Matcha · Coffee · Refresher · Soft Drinks</div>
 
       <div class="chips">
-        <a class="chip" href="neo_foods_preisliste.pdf#page=2" target="_blank">
+        <a class="chip" href="neo_foods_preisliste.pdf#page=2" target="_blank" rel="noopener">
           <span>Matcha</span><span>→</span>
         </a>
         <a class="chip" href="neo_foods_preisliste.pdf#page=3" target="_blank">
@@ -225,7 +237,7 @@
         </a>
       </div>
 
-      <a class="chip full" href="neo_foods_preisliste.pdf#page=2" target="_blank">
+      <a class="chip full" href="getraenkekarte.html">
         <span>Komplette Getränkekarte öffnen</span><span>→</span>
       </a>
     </section>
@@ -233,7 +245,7 @@
     <section class="menu-card">
       <h2>Eiskarte</h2>
       <div class="sub">Klassiker · Fruchtig · Besonders</div>
-      <a class="chip full" href="eiskarte.pdf" target="_blank" rel="noopener">
+      <a class="chip full" href="eiskarte.html">
         <span>Eiskarte öffnen</span><span>→</span>
       </a>
       <div class="note">
@@ -243,8 +255,11 @@
   </main>
 
   <footer>
-    <strong>NEO FOODS</strong><br><br>
-    Menü · mobil optimiert
+    <strong>NEO FOODS</strong><br>
+    <div class="legal-links">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
   </footer>
 
 </body>
