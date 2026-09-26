@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0d4637">
+  <title>NEO FOODS | Menü</title>
+  <style>
+    :root{
+      --green:#0d4637;
+      --cream:#f6efe1;
+      --orange:#f5822a;
+      --ink:#17382f;
+      --white:#ffffff;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:var(--cream);
+      color:var(--ink);
+    }
+
+    .hero{
+      min-height:36vh;
+      background:
+        radial-gradient(circle at 90% 10%, rgba(245,130,42,.95) 0 90px, transparent 92px),
+        linear-gradient(135deg, #0b3d31, #0d4637 70%);
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:50px 20px 38px;
+    }
+
+    .logo-wrap{
+      max-width:680px;
+      width:100%;
+    }
+
+    .logo{
+      width:118px;
+      height:118px;
+      margin:0 auto 20px;
+      border:4px solid white;
+      border-radius:50%;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      line-height:.85;
+      font-weight:800;
+      letter-spacing:2px;
+    }
+    .logo .neo{font-size:36px}
+    .logo .foods{font-size:17px; letter-spacing:5px; margin-top:7px}
+
+    h1{
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:clamp(38px, 8vw, 64px);
+      margin:0;
+    }
+    .tagline{
+      margin:10px 0 0;
+      font-size:15px;
+      letter-spacing:3px;
+      text-transform:uppercase;
+      opacity:.92;
+    }
+
+    main{
+      max-width:760px;
+      margin:-18px auto 0;
+      padding:0 16px 46px;
+      position:relative;
+    }
+
+    .menu-card{
+      background:#fffaf1;
+      border-radius:24px;
+      padding:24px;
+      margin-bottom:18px;
+      box-shadow:0 12px 34px rgba(13,70,55,.11);
+      border:1px solid rgba(13,70,55,.08);
+    }
+
+    .menu-card h2{
+      margin:0 0 6px;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:32px;
+      color:var(--green);
+    }
+
+    .menu-card .sub{
+      color:#6f766f;
+      font-size:14px;
+      margin-bottom:18px;
+    }
+
+    .chips{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:11px;
+    }
+
+    .chip{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      text-decoration:none;
+      background:white;
+      color:var(--green);
+      border:1.5px solid rgba(13,70,55,.15);
+      border-radius:15px;
+      padding:15px 16px;
+      font-weight:700;
+      transition:.18s ease;
+      min-height:54px;
+    }
+
+    .chip:hover{
+      transform:translateY(-2px);
+      border-color:var(--orange);
+      box-shadow:0 8px 20px rgba(0,0,0,.07);
+    }
+
+    .chip span:last-child{
+      color:var(--orange);
+      font-size:22px;
+    }
+
+    .full{
+      margin-top:12px;
+      width:100%;
+    }
+
+    .disabled{
+      opacity:.48;
+      pointer-events:none;
+      cursor:default;
+    }
+
+    .note{
+      font-size:12px;
+      color:#737a74;
+      margin-top:14px;
+      line-height:1.5;
+    }
+
+    footer{
+      text-align:center;
+      background:var(--green);
+      color:white;
+      padding:26px 18px 32px;
+      font-size:13px;
+    }
+
+    footer strong{letter-spacing:2px}
+
+    @media (max-width:560px){
+      .chips{grid-template-columns:1fr}
+      .menu-card{padding:20px}
+      .hero{min-height:32vh}
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="logo-wrap">
+      <div class="logo" aria-label="NEO FOODS">
+        <div class="neo">neo</div>
+        <div class="foods">FOODS</div>
+      </div>
+      <h1>Unsere Karte</h1>
+      <p class="tagline">Good Food · Good Mood</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="menu-card">
+      <h2>Speisekarte</h2>
+      <div class="sub">Frühstück · Croissants · Salate · Desserts</div>
+
+      <div class="chips">
+        <a class="chip" href="neo_foods_preisliste.pdf#page=1" target="_blank">
+          <span>Frühstück</span><span>→</span>
+        </a>
+        <a class="chip" href="neo_foods_preisliste.pdf#page=1" target="_blank">
+          <span>Croissants</span><span>→</span>
+        </a>
+        <a class="chip" href="neo_foods_preisliste.pdf#page=1" target="_blank">
+          <span>Salate</span><span>→</span>
+        </a>
+        <a class="chip" href="neo_foods_preisliste.pdf#page=2" target="_blank">
+          <span>Desserts</span><span>→</span>
+        </a>
+      </div>
+
+      <a class="chip full" href="neo_foods_preisliste.pdf#page=1" target="_blank">
+        <span>Komplette Speisekarte öffnen</span><span>→</span>
+      </a>
+    </section>
+
+    <section class="menu-card">
+      <h2>Getränkekarte</h2>
+      <div class="sub">Matcha · Coffee · Refresher · Soft Drinks</div>
+
+      <div class="chips">
+        <a class="chip" href="neo_foods_preisliste.pdf#page=2" target="_blank">
+          <span>Matcha</span><span>→</span>
+        </a>
+        <a class="chip" href="neo_foods_preisliste.pdf#page=3" target="_blank">
+          <span>Coffee</span><span>→</span>
+        </a>
+        <a class="chip" href="neo_foods_preisliste.pdf#page=4" target="_blank">
+          <span>Refresher</span><span>→</span>
+        </a>
+        <a class="chip" href="neo_foods_preisliste.pdf#page=4" target="_blank">
+          <span>Soft Drinks</span><span>→</span>
+        </a>
+      </div>
+
+      <a class="chip full" href="neo_foods_preisliste.pdf#page=2" target="_blank">
+        <span>Komplette Getränkekarte öffnen</span><span>→</span>
+      </a>
+    </section>
+
+    <section class="menu-card">
+      <h2>Eiskarte</h2>
+      <div class="sub">Klassiker · Fruchtig · Besonders</div>
+      <a class="chip full" href="eiskarte.pdf" target="_blank" rel="noopener">
+        <span>Eiskarte öffnen</span><span>→</span>
+      </a>
+      <div class="note">
+        Alle Sorten · 2,30 € pro Kugel
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>NEO FOODS</strong><br><br>
+    Menü · mobil optimiert
+  </footer>
+
+</body>
+</html>
