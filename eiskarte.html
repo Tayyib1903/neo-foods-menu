@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0d4637">
+  <title>Eiskarte | NEO FOODS</title>
+  
+<style>
+  :root{
+    --green:#0d4637;
+    --cream:#f6efe1;
+    --orange:#f5822a;
+    --white:#fff;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%;font-family:Arial,Helvetica,sans-serif;background:#1f1f1f}
+  body{display:flex;flex-direction:column}
+  .topbar{
+    min-height:64px;
+    background:var(--green);
+    color:white;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:10px 14px;
+    box-shadow:0 2px 12px rgba(0,0,0,.28);
+    z-index:2;
+  }
+  .topbar .title{
+    font-weight:800;
+    flex:1;
+    text-align:center;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:21px;
+  }
+  .btn{
+    color:white;
+    text-decoration:none;
+    border:1px solid rgba(255,255,255,.35);
+    border-radius:11px;
+    padding:10px 13px;
+    font-weight:700;
+    white-space:nowrap;
+    background:rgba(255,255,255,.08);
+  }
+  .btn:hover{background:rgba(255,255,255,.16)}
+  .reader{
+    flex:1;
+    min-height:0;
+    background:#333;
+  }
+  iframe{
+    width:100%;
+    height:100%;
+    border:0;
+    display:block;
+    background:white;
+  }
+  @media(max-width:560px){
+    .topbar{min-height:58px;padding:8px}
+    .btn{padding:9px 10px;font-size:13px}
+    .topbar .title{font-size:18px}
+  }
+</style>
+
+</head>
+<body>
+  <div class="topbar">
+    <a class="btn" href="index.html">← Menü</a>
+    <div class="title">Eiskarte</div>
+    <a class="btn" href="eiskarte.pdf" target="_blank" rel="noopener">PDF ↗</a>
+  </div>
+  <div class="reader">
+    <iframe src="eiskarte.pdf" title="Eiskarte PDF"></iframe>
+  </div>
+</body>
+</html>
