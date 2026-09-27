@@ -10,3 +10,11 @@
 @keyframes menu-arrive{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 @media(prefers-reduced-motion:no-preference){.menu-tile{animation:menu-arrive .4s ease backwards}.menu-tile:nth-child(2){animation-delay:.06s}.menu-tile:nth-child(3){animation-delay:.12s}}
 @media(prefers-reduced-motion:reduce){.menu-tile,.tile-arrow .ui-icon{transition:none;animation:none}.menu-tile:hover,.menu-tile:active,.menu-tile:hover .tile-arrow .ui-icon,.menu-tile:active .tile-arrow .ui-icon{transform:none}}
+
+/* Intentional selection feedback before following a menu link. */
+.menu-tile{transition:background .2s ease,color .2s ease,transform .2s ease,box-shadow .2s ease,opacity .2s ease}
+.menu-tile.is-opening{animation:none;background:var(--green);color:var(--cream);transform:translateY(-3px) scale(1.015);box-shadow:0 12px 28px rgba(16,61,50,.16)}
+.menu-tile.is-opening p,.menu-tile.is-opening p strong,.menu-tile.is-opening .tile-number{color:var(--cream)}
+.menu-tile.is-opening .tile-arrow{color:#ffac6e}.menu-tile.is-opening .tile-arrow .ui-icon{transform:translate(4px,-4px)}
+.menu-grid.is-navigating .menu-tile:not(.is-opening){opacity:.45;transform:scale(.985)}
+@media(prefers-reduced-motion:reduce){.menu-tile.is-opening,.menu-grid.is-navigating .menu-tile:not(.is-opening),.menu-tile.is-opening .tile-arrow .ui-icon{transform:none;transition:none}}
