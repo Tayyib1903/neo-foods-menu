@@ -1,0 +1,154 @@
+{
+  "title": "Eiskarte",
+  "card_description": "Deine Lieblingssorte.",
+  "pdf": "/neo-foods-menu/uploads/eiskarte.pdf",
+  "pdf_visible": true,
+  "scoop_price": "2,30",
+  "sections": [
+    {
+      "title": "Eiskarte",
+      "tagline": "Deine Lieblingskugel wartet.",
+      "image": "/neo-foods-menu/uploads/ice.webp",
+      "visible": true,
+      "groups": [
+        {
+          "title": "Klassiker",
+          "items": [
+            {
+              "name": "Vanille",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            },
+            {
+              "name": "Schokolade",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            },
+            {
+              "name": "Weiße Schokolade",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            },
+            {
+              "name": "Kaffee",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            },
+            {
+              "name": "Kokos",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            },
+            {
+              "name": "Haselnuss",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            },
+            {
+              "name": "Pistazien",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            },
+            {
+              "name": "Walnuss",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "Fruchtig",
+          "items": [
+            {
+              "name": "Zitrone",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            },
+            {
+              "name": "Erdbeere",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            },
+            {
+              "name": "Himbeere",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            },
+            {
+              "name": "Mango",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            },
+            {
+              "name": "Melone",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "Besonders",
+          "items": [
+            {
+              "name": "Cookies",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            },
+            {
+              "name": "Nutella",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            },
+            {
+              "name": "Snickers",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            },
+            {
+              "name": "Salzkaramell",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            },
+            {
+              "name": "Cheesecake Royal",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            },
+            {
+              "name": "Aphrodite",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            },
+            {
+              "name": "Joghurt-Honig",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            }
+          ]
+        }
+      ],
+      "note_title": "",
+      "note": ""
+    }
+  ]
+}

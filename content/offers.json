@@ -1,0 +1,12 @@
+{
+  "offers": [
+    {
+      "visible": true,
+      "label": "UNSERE ABENDAKTION",
+      "title": "Pastel de Nata",
+      "subtitle": "+ Kaffee",
+      "price": "5,50",
+      "time": "17–21 Uhr"
+    }
+  ]
+}

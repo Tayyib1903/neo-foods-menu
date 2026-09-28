@@ -1,0 +1,345 @@
+{
+  "title": "Speisekarte",
+  "card_description": "Frühstück, Croissants,\nSalate & Desserts",
+  "pdf": "/neo-foods-menu/uploads/speisekarte.pdf",
+  "pdf_visible": true,
+  "sections": [
+    {
+      "title": "Frühstück",
+      "tagline": "A little morning love.",
+      "image": "/neo-foods-menu/uploads/breakfast.webp",
+      "visible": true,
+      "groups": [
+        {
+          "title": "Frühstück",
+          "items": [
+            {
+              "name": "Wiener Frühstück",
+              "price": "9,90",
+              "description": "Semmel, Butter, Marmelade, gekochtes Ei",
+              "allergens": "A, C, G",
+              "visible": true
+            },
+            {
+              "name": "Neo Croissant Frühstück",
+              "price": "11,90",
+              "description": "Croissant, Marmelade, Butter, Obstschüssel",
+              "allergens": "A, C, G",
+              "visible": true
+            },
+            {
+              "name": "Mediterranes Frühstück",
+              "price": "12,90",
+              "description": "Feta, Oliven, Tomaten, Gurke, gekochtes Ei, Honig, Butter, Olivenöl, Oregano, frisches Brot",
+              "allergens": "A, C, G",
+              "visible": true
+            },
+            {
+              "name": "Greek Yogurt Bowl",
+              "price": "6,80",
+              "description": "Griechischer Joghurt, Granola, Honig, frische Beeren & saisonales Obst",
+              "allergens": "A, G, H",
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "Brot & Sandwiches",
+          "items": [
+            {
+              "name": "Sesamring Classic",
+              "price": "4,90",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            },
+            {
+              "name": "Sesamring Pesto",
+              "price": "5,50",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            },
+            {
+              "name": "Bagel Sandwich",
+              "price": "3,90",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            },
+            {
+              "name": "Sandwich",
+              "price": "2,90",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "Extras",
+          "items": [
+            {
+              "name": "Butter Käsesemmel",
+              "price": "1,70",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            },
+            {
+              "name": "Buttersemmel",
+              "price": "1,40",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            },
+            {
+              "name": "Buttersemmelnsandwich",
+              "price": "2,90",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            },
+            {
+              "name": "Buttersemmelnsandwich Special",
+              "price": "5,90",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            }
+          ]
+        }
+      ],
+      "note_title": "",
+      "note": ""
+    },
+    {
+      "title": "Croissants",
+      "tagline": "Herzhaft belegt. Süß verliebt.",
+      "image": "/neo-foods-menu/uploads/croissant.webp",
+      "visible": true,
+      "groups": [
+        {
+          "title": "Unsere Klassiker",
+          "items": [
+            {
+              "name": "Traffic Light",
+              "price": "6,20",
+              "description": "Croissant, Frischkäse, getrocknete Tomaten, Avocado, Rucola, gekochtes Ei",
+              "allergens": "A, C, G",
+              "visible": true
+            },
+            {
+              "name": "The Classic",
+              "price": "5,90",
+              "description": "Croissant, Putenschinken, Gouda, Tomate, Honig-Senf-Sauce",
+              "allergens": "A, C, G, M",
+              "visible": true
+            },
+            {
+              "name": "Ciao Bella",
+              "price": "5,90",
+              "description": "Croissant, Pesto, Mozzarella, Tomate, Rucola",
+              "allergens": "A, C, G",
+              "visible": true
+            },
+            {
+              "name": "Green Garden",
+              "price": "6,20",
+              "description": "Croissant, Rucola-Cashew-Sauce, Mozzarella, Tomate, Rucola",
+              "allergens": "A, G, H",
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "Süß & herzhaft",
+          "items": [
+            {
+              "name": "Sweet & Salty",
+              "price": "6,20",
+              "description": "Croissant, Brie, Putenschinken, Rucola, Honig, Walnüsse",
+              "allergens": "A, C, G, H",
+              "visible": true
+            },
+            {
+              "name": "Butter Croissant Neo",
+              "price": "4,90",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            },
+            {
+              "name": "Croissant gefüllt",
+              "price": "4,90",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            }
+          ]
+        }
+      ],
+      "note_title": "",
+      "note": ""
+    },
+    {
+      "title": "Salate",
+      "tagline": "Frisch, bunt & voller Geschmack.",
+      "image": "/neo-foods-menu/uploads/salad.webp",
+      "visible": true,
+      "groups": [
+        {
+          "title": "Fruchtig & fein",
+          "items": [
+            {
+              "name": "Greek Style",
+              "price": "6,90",
+              "description": "Wassermelone, Feta, Thymian, Olivenöl",
+              "allergens": "G",
+              "visible": true
+            },
+            {
+              "name": "Amor Mio",
+              "price": "9,50",
+              "description": "Feigen, Brie, Walnüsse, Honig, Basilikum",
+              "allergens": "G, H",
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "Grün & knackig",
+          "items": [
+            {
+              "name": "Aegean Breeze",
+              "price": "7,90",
+              "description": "Blattsalat, Karotte, Rotkohl, Granatapfel, Gurke, Zitronen-Olivenöl-Dressing",
+              "allergens": "",
+              "visible": true
+            },
+            {
+              "name": "Mediterranean Garden",
+              "price": "7,90",
+              "description": "Blattsalat, Cherrytomaten, Gurke, Karotte, Oliven, Zitronen-Dressing",
+              "allergens": "",
+              "visible": true
+            }
+          ]
+        }
+      ],
+      "note_title": "",
+      "note": ""
+    },
+    {
+      "title": "Desserts",
+      "tagline": "Sweet moments. Brighter days.",
+      "image": "/neo-foods-menu/uploads/dessert.webp",
+      "visible": true,
+      "groups": [
+        {
+          "title": "Nata & Gebäck",
+          "items": [
+            {
+              "name": "Pastel de Nata",
+              "price": "2,60",
+              "description": "",
+              "allergens": "A, C, G",
+              "visible": true
+            },
+            {
+              "name": "Nata Berry",
+              "price": "2,70",
+              "description": "",
+              "allergens": "A, C, G",
+              "visible": true
+            },
+            {
+              "name": "Nutella Nata",
+              "price": "2,80",
+              "description": "",
+              "allergens": "A, C, F, G, H",
+              "visible": true
+            },
+            {
+              "name": "Pistazien Nata",
+              "price": "2,90",
+              "description": "",
+              "allergens": "A, C, G, H",
+              "visible": true
+            },
+            {
+              "name": "Buttertopfengolatsche",
+              "price": "3,40",
+              "description": "",
+              "allergens": "A, C, G",
+              "visible": true
+            },
+            {
+              "name": "Dutch Stroopwafel",
+              "price": "2,90",
+              "description": "",
+              "allergens": "A, C, F, G",
+              "visible": true
+            },
+            {
+              "name": "Dutch Stroopwafel Schoko",
+              "price": "3,20",
+              "description": "",
+              "allergens": "A, C, F, G",
+              "visible": true
+            },
+            {
+              "name": "Dutch Stroopwafel Pistazien",
+              "price": "3,40",
+              "description": "",
+              "allergens": "A, C, F, G",
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "Cookies & Kuchen",
+          "items": [
+            {
+              "name": "Van Stapele Cookie",
+              "price": "3,60",
+              "description": "",
+              "allergens": "C, G",
+              "visible": true
+            },
+            {
+              "name": "Kvæfjordkake",
+              "price": "4,80",
+              "description": "",
+              "allergens": "A, C, G, H",
+              "visible": true
+            },
+            {
+              "name": "Pavé & Tiramisu",
+              "price": "4,90",
+              "description": "",
+              "allergens": "A, C, G",
+              "visible": true
+            },
+            {
+              "name": "Twister Cake",
+              "price": "5,80",
+              "description": "",
+              "allergens": "",
+              "visible": true
+            },
+            {
+              "name": "Ofen Milchreis",
+              "price": "5,90",
+              "description": "",
+              "allergens": "G",
+              "visible": true
+            }
+          ]
+        }
+      ],
+      "note_title": "",
+      "note": ""
+    }
+  ]
+}
