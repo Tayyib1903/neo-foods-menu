@@ -1,266 +1,567 @@
+Hier ist eine Live-Vorschau des neuen responsive Designs:
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0d4637">
-  <title>NEO FOODS | Menü</title>
+  <title>NEO FOODS – Digital Menu Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --green:#0d4637;
-      --cream:#f6efe1;
-      --orange:#f5822a;
-      --ink:#17382f;
-      --white:#ffffff;
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:Arial, Helvetica, sans-serif;
-      background:var(--cream);
-      color:var(--ink);
+    :root {
+      --bg-main: #f8f6f2;
+      --bg-card: #ffffff;
+      --text-main: #1d1d1f;
+      --text-muted: #6e6e73;
+      --brand-accent: #d97706;
+      --brand-accent-light: #fef3c7;
+      --brand-dark: #18181b;
+      --border-color: #e5e5ea;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .hero{
-      min-height:36vh;
-      background:
-        radial-gradient(circle at 90% 10%, rgba(245,130,42,.95) 0 90px, transparent 92px),
-        linear-gradient(135deg, #0b3d31, #0d4637 70%);
-      color:white;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding:50px 20px 38px;
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.5;
+      padding-bottom: 40px;
+      -webkit-font-smoothing: antialiased;
     }
 
-    .logo-wrap{
-      max-width:680px;
-      width:100%;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    .logo{
-      width:118px;
-      height:118px;
-      margin:0 auto 20px;
-      border:4px solid white;
-      border-radius:50%;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      line-height:.85;
-      font-weight:800;
-      letter-spacing:2px;
-    }
-    .logo .neo{font-size:36px}
-    .logo .foods{font-size:17px; letter-spacing:5px; margin-top:7px}
-
-    h1{
-      font-family:Georgia, "Times New Roman", serif;
-      font-size:clamp(38px, 8vw, 64px);
-      margin:0;
-    }
-    .tagline{
-      margin:10px 0 0;
-      font-size:15px;
-      letter-spacing:3px;
-      text-transform:uppercase;
-      opacity:.92;
+    .container {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 0 16px;
     }
 
-    main{
-      max-width:760px;
-      margin:-18px auto 0;
-      padding:0 16px 46px;
-      position:relative;
+    /* HEADER */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(248, 246, 242, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      padding: 12px 0;
     }
 
-    .menu-card{
-      background:#fffaf1;
-      border-radius:24px;
-      padding:24px;
-      margin-bottom:18px;
-      box-shadow:0 12px 34px rgba(13,70,55,.11);
-      border:1px solid rgba(13,70,55,.08);
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    .menu-card h2{
-      margin:0 0 6px;
-      font-family:Georgia, "Times New Roman", serif;
-      font-size:32px;
-      color:var(--green);
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
-    .menu-card .sub{
-      color:#6f766f;
-      font-size:14px;
-      margin-bottom:18px;
+    .brand-logo-text {
+      font-size: 1.3rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--brand-dark);
     }
 
-    .chips{
-      display:grid;
-      grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:11px;
+    .brand-location {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      text-transform: uppercase;
     }
 
-    .chip{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-      text-decoration:none;
-      background:white;
-      color:var(--green);
-      border:1.5px solid rgba(13,70,55,.15);
-      border-radius:15px;
-      padding:15px 16px;
-      font-weight:700;
-      transition:.18s ease;
-      min-height:54px;
+    .header-nav {
+      display: flex;
+      gap: 8px;
     }
 
-    .chip:hover{
-      transform:translateY(-2px);
-      border-color:var(--orange);
-      box-shadow:0 8px 20px rgba(0,0,0,.07);
+    .nav-btn {
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 20px;
+      background: rgba(0, 0, 0, 0.05);
+      transition: var(--transition);
     }
 
-    .chip span:last-child{
-      color:var(--orange);
-      font-size:22px;
+    .nav-btn:hover {
+      background: var(--brand-dark);
+      color: #fff;
     }
 
-    .full{
-      margin-top:12px;
-      width:100%;
+    /* HERO BANNER */
+    .hero-banner {
+      margin: 16px 0 24px;
+      background: linear-gradient(135deg, #2d2b2a 0%, #18181b 100%);
+      color: #fff;
+      border-radius: var(--radius-lg);
+      padding: 20px 24px;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
     }
 
-    .disabled{
-      opacity:.48;
-      pointer-events:none;
-      cursor:default;
+    .hero-banner::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(217, 119, 6, 0.35) 0%, rgba(0,0,0,0) 70%);
+      border-radius: 50%;
+      pointer-events: none;
     }
 
-    .note{
-      font-size:12px;
-      color:#737a74;
-      margin-top:14px;
-      line-height:1.5;
+    .badge-time {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(4px);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: #fef3c7;
+      margin-bottom: 12px;
     }
 
-    footer{
-      text-align:center;
-      background:var(--green);
-      color:white;
-      padding:26px 18px 32px;
-      font-size:13px;
+    .hero-body {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
     }
 
-    footer strong{letter-spacing:2px}
-    .legal-links{
-      margin-top:14px;
-      display:flex;
-      justify-content:center;
-      gap:18px;
-      flex-wrap:wrap;
-    }
-    .legal-links a{
-      color:white;
-      text-decoration:underline;
-      text-underline-offset:3px;
+    .hero-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      line-height: 1.2;
     }
 
-    @media (max-width:560px){
-      .chips{grid-template-columns:1fr}
-      .menu-card{padding:20px}
-      .hero{min-height:32vh}
+    .hero-title span {
+      color: var(--brand-accent);
+      display: block;
+    }
+
+    .price-tag {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+    }
+
+    /* MENU CARDS */
+    .cards-section {
+      margin-bottom: 28px;
+    }
+
+    .section-header {
+      margin-bottom: 14px;
+    }
+
+    .section-subtitle {
+      font-size: 0.68rem;
+      font-weight: 800;
+      color: var(--brand-accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .cards-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .card-item {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .card-item:hover, .card-item:active {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: #d1d1d6;
+    }
+
+    .card-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .card-num {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--brand-accent);
+      background: var(--brand-accent-light);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .card-info h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .card-info p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.3;
+    }
+
+    .card-arrow {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--bg-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+
+    .card-item:hover .card-arrow {
+      background: var(--brand-dark);
+      color: #fff;
+    }
+
+    /* VIBE CARD */
+    .vibe-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 28px;
+    }
+
+    .vibe-placeholder {
+      height: 160px;
+      background: linear-gradient(135deg, #3f3f46 0%, #18181b 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #a1a1aa;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .vibe-content {
+      padding: 18px;
+    }
+
+    .vibe-content h2 {
+      font-size: 1.2rem;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .vibe-content p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 14px;
+      border-radius: 20px;
+      background: var(--bg-main);
+      font-size: 0.78rem;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .social-btn:hover {
+      background: var(--brand-dark);
+      color: #fff;
+    }
+
+    /* ACCORDION */
+    details {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 28px;
+    }
+
+    summary {
+      padding: 16px 18px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+    }
+
+    .summary-title {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .summary-title span:first-child {
+      font-size: 0.65rem;
+      font-weight: 800;
+      color: var(--brand-accent);
+      letter-spacing: 0.05em;
+    }
+
+    .summary-badge {
+      font-size: 0.72rem;
+      background: var(--bg-main);
+      padding: 4px 10px;
+      border-radius: 12px;
+      color: var(--text-muted);
+    }
+
+    /* LOCATION & FOOTER */
+    .location-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 28px;
+      text-align: center;
+    }
+
+    .location-card h2 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .location-card p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .btn-maps {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 12px;
+      background: var(--brand-dark);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.85rem;
+      border-radius: var(--radius-md);
+    }
+
+    .footer {
+      text-align: center;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 10px;
+    }
+
+    .icon-arrow {
+      width: 16px;
+      height: 16px;
+      stroke-width: 2.5;
+      stroke: currentColor;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
   </style>
 </head>
 <body>
 
-  <header class="hero">
-    <div class="logo-wrap">
-      <div class="logo" aria-label="NEO FOODS">
-        <div class="neo">neo</div>
-        <div class="foods">FOODS</div>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-content">
+      <div class="brand-logo">
+        <div>
+          <div class="brand-logo-text">NEO FOODS</div>
+          <div class="brand-location">Margaretenplatz · Wien</div>
+        </div>
       </div>
-      <h1>Unsere Karte</h1>
-      <p class="tagline">Good Food · Good Mood</p>
+      <nav class="header-nav">
+        <a href="#karten" class="nav-btn">Karten</a>
+        <a href="#besuch" class="nav-btn">Besuch</a>
+      </nav>
     </div>
   </header>
 
-  <main>
-    <section class="menu-card">
-      <h2>Speisekarte</h2>
-      <div class="sub">Frühstück · Croissants · Salate · Desserts</div>
+  <main class="container">
 
-      <div class="chips">
-        <a class="chip" href="speisekarte.html#page=1">
-          <span>Frühstück</span><span>→</span>
-        </a>
-        <a class="chip" href="speisekarte.html#page=1">
-          <span>Croissants</span><span>→</span>
-        </a>
-        <a class="chip" href="speisekarte.html#page=1">
-          <span>Salate</span><span>→</span>
-        </a>
-        <a class="chip" href="speisekarte.html#page=2">
-          <span>Desserts</span><span>→</span>
-        </a>
+    <!-- HERO BANNER -->
+    <section class="hero-banner">
+      <div class="badge-time">
+        <svg class="icon-arrow" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        UNSERE ABENDAKTION · 17–21 UHR
       </div>
-
-      <a class="chip full" href="speisekarte.html">
-        <span>Speisekarte durchblättern</span><span>→</span>
-      </a>
-    </section>
-
-    <section class="menu-card">
-      <h2>Getränkekarte</h2>
-      <div class="sub">Matcha · Coffee · Refresher · Soft Drinks</div>
-
-      <div class="chips">
-        <a class="chip" href="getraenkekarte.html#page=1">
-          <span>Matcha</span><span>→</span>
-        </a>
-        <a class="chip" href="getraenkekarte.html#page=2">
-          <span>Coffee</span><span>→</span>
-        </a>
-        <a class="chip" href="getraenkekarte.html#page=3">
-          <span>Refresher</span><span>→</span>
-        </a>
-        <a class="chip" href="getraenkekarte.html#page=3">
-          <span>Soft Drinks</span><span>→</span>
-        </a>
-      </div>
-
-      <a class="chip full" href="getraenkekarte.html">
-        <span>Getränkekarte durchblättern</span><span>→</span>
-      </a>
-    </section>
-
-    <section class="menu-card">
-      <h2>Eiskarte</h2>
-      <div class="sub">Klassiker · Fruchtig · Besonders</div>
-      <a class="chip full" href="eiskarte.html">
-        <span>Eiskarte ansehen</span><span>→</span>
-      </a>
-      <div class="note">
-        Alle Sorten · 2,30 € pro Kugel
+      <div class="hero-body">
+        <div class="hero-title">
+          Pastel de Nata
+          <span>+ Kaffee</span>
+        </div>
+        <div class="price-tag">5,50 €</div>
       </div>
     </section>
+
+    <!-- CARDS SECTION -->
+    <section id="karten" class="cards-section">
+      <div class="section-header">
+        <div class="section-subtitle">Guter Geschmack. Gute Momente.</div>
+        <h2 class="section-title">Worauf hast du Lust?</h2>
+      </div>
+
+      <div class="cards-grid">
+        <a href="speisekarte.html" class="card-item">
+          <div class="card-left">
+            <div class="card-num">01</div>
+            <div class="card-info">
+              <h3>Speisekarte</h3>
+              <p>Frühstück, Croissants, Salate & Desserts</p>
+            </div>
+          </div>
+          <div class="card-arrow">
+            <svg class="icon-arrow" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </a>
+
+        <a href="getraenkekarte.html" class="card-item">
+          <div class="card-left">
+            <div class="card-num">02</div>
+            <div class="card-info">
+              <h3>Getränkekarte</h3>
+              <p>Matcha, Kaffee, Refresher & Soft Drinks</p>
+            </div>
+          </div>
+          <div class="card-arrow">
+            <svg class="icon-arrow" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </a>
+
+        <a href="eiskarte.html" class="card-item">
+          <div class="card-left">
+            <div class="card-num">03</div>
+            <div class="card-info">
+              <h3>Eiskarte</h3>
+              <p>Deine Lieblingssorte · <strong>2,30 €</strong> pro Kugel</p>
+            </div>
+          </div>
+          <div class="card-arrow">
+            <svg class="icon-arrow" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ATMOSPHERE -->
+    <section class="vibe-card">
+      <div class="vibe-placeholder">
+        [ Photo Preview: interior.webp ]
+      </div>
+      <div class="vibe-content">
+        <div class="section-subtitle">Dein Platz in Margareten</div>
+        <h2>Komm rein. Bleib ein bisschen.</h2>
+        <p>Dein Frühstück. Dein Lieblingsdrink. Deine kleine Auszeit bei NEO.</p>
+        <div class="social-links">
+          <a href="#" class="social-btn">Instagram</a>
+          <a href="#" class="social-btn">TikTok</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO ACCORDION -->
+    <section>
+      <details>
+        <summary>
+          <div class="summary-title">
+            <span>NEO MOMENTS</span>
+            <span>Nata in the making</span>
+          </div>
+          <div class="summary-badge">Video (16s)</div>
+        </summary>
+      </details>
+    </section>
+
+    <!-- LOCATION -->
+    <section id="besuch" class="location-card">
+      <div class="section-subtitle">BESUCH UNS</div>
+      <h2>Mitten in Margareten.</h2>
+      <p>NEO FOODS Vienna<br>Margaretenplatz 5 · 1050 Wien</p>
+      <a href="#" class="btn-maps">In Google Maps öffnen</a>
+    </section>
+
   </main>
 
-  <footer>
-    <strong>NEO FOODS</strong><br>
-    <div class="legal-links">
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
-    </div>
+  <footer class="container footer">
+    <p><strong>NEO FOODS VIENNA</strong> · Margaretenplatz 5 · 1050 Wien</p>
+    <nav class="footer-nav">
+      <a href="#">Tischkarten</a>
+      <a href="#">Impressum</a>
+      <a href="#">Datenschutz</a>
+    </nav>
   </footer>
 
 </body>
 </html>
+
