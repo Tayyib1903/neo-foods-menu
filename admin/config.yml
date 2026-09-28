@@ -1,8 +1,4 @@
 # NEO FOODS – Decap CMS
-# GitHub verlangt einen OAuth-Server für den Login.
-# Nach der Netlify-OAuth-Einrichtung unter backend ergänzen:
-#   site_domain: DEIN-NETLIFY-PROJEKT.netlify.app
-# Alternativ kann später ein eigener OAuth-Proxy oder Decap Turbo verwendet werden.
 
 backend:
   name: github
