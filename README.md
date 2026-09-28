@@ -8,3 +8,6 @@ Statische Website für GitHub Pages. Keine Installation, Bibliothek oder externe
 - `getraenkekarte.html`: Matcha (1), Coffee mit Tee (2), Refresher (3), Soft Drinks (4–5)
 - `eiskarte.html`: Eissorten und Kugelpreis
 
+## Decap CMS
+
+Die CMS-Integration ist unter `/admin/` vorbereitet. Einmalige Login-Einrichtung: siehe `CMS-SETUP.md`.

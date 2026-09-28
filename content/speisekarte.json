@@ -1,345 +1,304 @@
 {
+  "menu_label": "SPEISEKARTE",
   "title": "Speisekarte",
-  "card_description": "Frühstück, Croissants,\nSalate & Desserts",
-  "pdf": "/neo-foods-menu/uploads/speisekarte.pdf",
-  "pdf_visible": true,
-  "sections": [
+  "categories": [
     {
       "title": "Frühstück",
-      "tagline": "A little morning love.",
-      "image": "/neo-foods-menu/uploads/breakfast.webp",
-      "visible": true,
+      "subtitle": "A little morning love.",
+      "image": "breakfast.webp",
       "groups": [
         {
           "title": "Frühstück",
+          "type": "products",
           "items": [
             {
               "name": "Wiener Frühstück",
-              "price": "9,90",
+              "price": "9,90 €",
               "description": "Semmel, Butter, Marmelade, gekochtes Ei",
-              "allergens": "A, C, G",
-              "visible": true
+              "allergens": "A, C, G"
             },
             {
               "name": "Neo Croissant Frühstück",
-              "price": "11,90",
+              "price": "11,90 €",
               "description": "Croissant, Marmelade, Butter, Obstschüssel",
-              "allergens": "A, C, G",
-              "visible": true
+              "allergens": "A, C, G"
             },
             {
               "name": "Mediterranes Frühstück",
-              "price": "12,90",
+              "price": "12,90 €",
               "description": "Feta, Oliven, Tomaten, Gurke, gekochtes Ei, Honig, Butter, Olivenöl, Oregano, frisches Brot",
-              "allergens": "A, C, G",
-              "visible": true
+              "allergens": "A, C, G"
             },
             {
               "name": "Greek Yogurt Bowl",
-              "price": "6,80",
+              "price": "6,80 €",
               "description": "Griechischer Joghurt, Granola, Honig, frische Beeren & saisonales Obst",
-              "allergens": "A, G, H",
-              "visible": true
+              "allergens": "A, G, H"
             }
           ]
         },
         {
           "title": "Brot & Sandwiches",
+          "type": "products",
           "items": [
             {
               "name": "Sesamring Classic",
-              "price": "4,90",
+              "price": "4,90 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": "A, N"
             },
             {
               "name": "Sesamring Pesto",
-              "price": "5,50",
+              "price": "5,50 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Bagel Sandwich",
-              "price": "3,90",
+              "price": "3,90 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Sandwich",
-              "price": "2,90",
+              "price": "2,90 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             }
           ]
         },
         {
           "title": "Extras",
+          "type": "products",
           "items": [
             {
               "name": "Butter Käsesemmel",
-              "price": "1,70",
+              "price": "1,70 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": "A, G"
             },
             {
               "name": "Buttersemmel",
-              "price": "1,40",
+              "price": "1,40 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": "A, G"
             },
             {
-              "name": "Buttersemmelnsandwich",
-              "price": "2,90",
+              "name": "Buttersemmelsandwich",
+              "price": "2,90 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
-              "name": "Buttersemmelnsandwich Special",
-              "price": "5,90",
+              "name": "Buttersemmelsandwich Special",
+              "price": "5,90 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             }
           ]
         }
-      ],
-      "note_title": "",
-      "note": ""
+      ]
     },
     {
       "title": "Croissants",
-      "tagline": "Herzhaft belegt. Süß verliebt.",
-      "image": "/neo-foods-menu/uploads/croissant.webp",
-      "visible": true,
+      "subtitle": "Herzhaft belegt. Süß verliebt.",
+      "image": "croissant.webp",
       "groups": [
         {
           "title": "Unsere Klassiker",
+          "type": "products",
           "items": [
             {
               "name": "Traffic Light",
-              "price": "6,20",
+              "price": "6,20 €",
               "description": "Croissant, Frischkäse, getrocknete Tomaten, Avocado, Rucola, gekochtes Ei",
-              "allergens": "A, C, G",
-              "visible": true
+              "allergens": "A, C, G"
             },
             {
               "name": "The Classic",
-              "price": "5,90",
+              "price": "5,90 €",
               "description": "Croissant, Putenschinken, Gouda, Tomate, Honig-Senf-Sauce",
-              "allergens": "A, C, G, M",
-              "visible": true
+              "allergens": "A, C, G, M"
             },
             {
               "name": "Ciao Bella",
-              "price": "5,90",
+              "price": "5,90 €",
               "description": "Croissant, Pesto, Mozzarella, Tomate, Rucola",
-              "allergens": "A, C, G",
-              "visible": true
+              "allergens": "A, C, G"
             },
             {
               "name": "Green Garden",
-              "price": "6,20",
+              "price": "6,20 €",
               "description": "Croissant, Rucola-Cashew-Sauce, Mozzarella, Tomate, Rucola",
-              "allergens": "A, G, H",
-              "visible": true
+              "allergens": "A, G, H"
             }
           ]
         },
         {
           "title": "Süß & herzhaft",
+          "type": "products",
           "items": [
             {
               "name": "Sweet & Salty",
-              "price": "6,20",
+              "price": "6,20 €",
               "description": "Croissant, Brie, Putenschinken, Rucola, Honig, Walnüsse",
-              "allergens": "A, C, G, H",
-              "visible": true
+              "allergens": "A, C, G, H"
             },
             {
               "name": "Butter Croissant Neo",
-              "price": "4,90",
+              "price": "4,90 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": "A, C, G"
             },
             {
               "name": "Croissant gefüllt",
-              "price": "4,90",
+              "price": "4,90 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             }
           ]
         }
-      ],
-      "note_title": "",
-      "note": ""
+      ]
     },
     {
       "title": "Salate",
-      "tagline": "Frisch, bunt & voller Geschmack.",
-      "image": "/neo-foods-menu/uploads/salad.webp",
-      "visible": true,
+      "subtitle": "Frisch, bunt & voller Geschmack.",
+      "image": "salad.webp",
       "groups": [
         {
           "title": "Fruchtig & fein",
+          "type": "products",
           "items": [
             {
               "name": "Greek Style",
-              "price": "6,90",
+              "price": "6,90 €",
               "description": "Wassermelone, Feta, Thymian, Olivenöl",
-              "allergens": "G",
-              "visible": true
+              "allergens": "G"
             },
             {
               "name": "Amor Mio",
-              "price": "9,50",
+              "price": "9,50 €",
               "description": "Feigen, Brie, Walnüsse, Honig, Basilikum",
-              "allergens": "G, H",
-              "visible": true
+              "allergens": "G, H"
             }
           ]
         },
         {
           "title": "Grün & knackig",
+          "type": "products",
           "items": [
             {
               "name": "Aegean Breeze",
-              "price": "7,90",
+              "price": "7,90 €",
               "description": "Blattsalat, Karotte, Rotkohl, Granatapfel, Gurke, Zitronen-Olivenöl-Dressing",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Mediterranean Garden",
-              "price": "7,90",
+              "price": "7,90 €",
               "description": "Blattsalat, Cherrytomaten, Gurke, Karotte, Oliven, Zitronen-Dressing",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             }
           ]
         }
-      ],
-      "note_title": "",
-      "note": ""
+      ]
     },
     {
       "title": "Desserts",
-      "tagline": "Sweet moments. Brighter days.",
-      "image": "/neo-foods-menu/uploads/dessert.webp",
-      "visible": true,
+      "subtitle": "Sweet moments. Brighter days.",
+      "image": "dessert.webp",
       "groups": [
         {
           "title": "Nata & Gebäck",
+          "type": "products",
           "items": [
             {
               "name": "Pastel de Nata",
-              "price": "2,60",
+              "price": "2,60 €",
               "description": "",
-              "allergens": "A, C, G",
-              "visible": true
+              "allergens": "A, C, G"
             },
             {
               "name": "Nata Berry",
-              "price": "2,70",
+              "price": "2,70 €",
               "description": "",
-              "allergens": "A, C, G",
-              "visible": true
+              "allergens": "A, C, G"
             },
             {
               "name": "Nutella Nata",
-              "price": "2,80",
+              "price": "2,80 €",
               "description": "",
-              "allergens": "A, C, F, G, H",
-              "visible": true
+              "allergens": "A, C, F, G, H"
             },
             {
               "name": "Pistazien Nata",
-              "price": "2,90",
+              "price": "2,90 €",
               "description": "",
-              "allergens": "A, C, G, H",
-              "visible": true
+              "allergens": "A, C, G, H"
             },
             {
               "name": "Buttertopfengolatsche",
-              "price": "3,40",
+              "price": "3,40 €",
               "description": "",
-              "allergens": "A, C, G",
-              "visible": true
+              "allergens": "A, C, G"
             },
             {
               "name": "Dutch Stroopwafel",
-              "price": "2,90",
+              "price": "2,90 €",
               "description": "",
-              "allergens": "A, C, F, G",
-              "visible": true
+              "allergens": "A, C, F, G"
             },
             {
               "name": "Dutch Stroopwafel Schoko",
-              "price": "3,20",
+              "price": "3,20 €",
               "description": "",
-              "allergens": "A, C, F, G",
-              "visible": true
+              "allergens": "A, C, F, G"
             },
             {
               "name": "Dutch Stroopwafel Pistazien",
-              "price": "3,40",
+              "price": "3,40 €",
               "description": "",
-              "allergens": "A, C, F, G",
-              "visible": true
+              "allergens": "A, C, F, G, H"
             }
           ]
         },
         {
           "title": "Cookies & Kuchen",
+          "type": "products",
           "items": [
             {
               "name": "Van Stapele Cookie",
-              "price": "3,60",
+              "price": "3,60 €",
               "description": "",
-              "allergens": "C, G",
-              "visible": true
+              "allergens": "A, C, G"
             },
             {
               "name": "Kvæfjordkake",
-              "price": "4,80",
+              "price": "4,80 €",
               "description": "",
-              "allergens": "A, C, G, H",
-              "visible": true
+              "allergens": "A, C, G, H"
             },
             {
               "name": "Pavé & Tiramisu",
-              "price": "4,90",
+              "price": "4,90 €",
               "description": "",
-              "allergens": "A, C, G",
-              "visible": true
+              "allergens": "A, C, G"
             },
             {
               "name": "Twister Cake",
-              "price": "5,80",
-              "description": "",
-              "allergens": "",
-              "visible": true
+              "price": "Coming soon",
+              "description": "Bald bei uns",
+              "allergens": ""
             },
             {
               "name": "Ofen Milchreis",
-              "price": "5,90",
+              "price": "5,90 €",
               "description": "",
-              "allergens": "G",
-              "visible": true
+              "allergens": "G"
             }
           ]
         }
-      ],
-      "note_title": "",
-      "note": ""
+      ]
     }
   ]
 }

@@ -1,154 +1,52 @@
 {
+  "menu_label": "EISKARTE",
   "title": "Eiskarte",
-  "card_description": "Deine Lieblingssorte.",
-  "pdf": "/neo-foods-menu/uploads/eiskarte.pdf",
-  "pdf_visible": true,
-  "scoop_price": "2,30",
-  "sections": [
+  "categories": [
     {
       "title": "Eiskarte",
-      "tagline": "Deine Lieblingskugel wartet.",
-      "image": "/neo-foods-menu/uploads/ice.webp",
-      "visible": true,
+      "subtitle": "Deine Lieblingskugel wartet.",
+      "image": "ice.webp",
       "groups": [
         {
           "title": "Klassiker",
+          "type": "flavors",
           "items": [
-            {
-              "name": "Vanille",
-              "description": "",
-              "allergens": "",
-              "visible": true
-            },
-            {
-              "name": "Schokolade",
-              "description": "",
-              "allergens": "",
-              "visible": true
-            },
-            {
-              "name": "Weiße Schokolade",
-              "description": "",
-              "allergens": "",
-              "visible": true
-            },
-            {
-              "name": "Kaffee",
-              "description": "",
-              "allergens": "",
-              "visible": true
-            },
-            {
-              "name": "Kokos",
-              "description": "",
-              "allergens": "",
-              "visible": true
-            },
-            {
-              "name": "Haselnuss",
-              "description": "",
-              "allergens": "",
-              "visible": true
-            },
-            {
-              "name": "Pistazien",
-              "description": "",
-              "allergens": "",
-              "visible": true
-            },
-            {
-              "name": "Walnuss",
-              "description": "",
-              "allergens": "",
-              "visible": true
-            }
+            "Vanille",
+            "Schokolade",
+            "Weiße Schokolade",
+            "Kaffee",
+            "Kokos",
+            "Haselnuss",
+            "Pistazien",
+            "Walnuss"
           ]
         },
         {
           "title": "Fruchtig",
+          "type": "flavors",
           "items": [
-            {
-              "name": "Zitrone",
-              "description": "",
-              "allergens": "",
-              "visible": true
-            },
-            {
-              "name": "Erdbeere",
-              "description": "",
-              "allergens": "",
-              "visible": true
-            },
-            {
-              "name": "Himbeere",
-              "description": "",
-              "allergens": "",
-              "visible": true
-            },
-            {
-              "name": "Mango",
-              "description": "",
-              "allergens": "",
-              "visible": true
-            },
-            {
-              "name": "Melone",
-              "description": "",
-              "allergens": "",
-              "visible": true
-            }
+            "Zitrone",
+            "Erdbeere",
+            "Himbeere",
+            "Mango",
+            "Melone"
           ]
         },
         {
           "title": "Besonders",
+          "type": "flavors",
           "items": [
-            {
-              "name": "Cookies",
-              "description": "",
-              "allergens": "",
-              "visible": true
-            },
-            {
-              "name": "Nutella",
-              "description": "",
-              "allergens": "",
-              "visible": true
-            },
-            {
-              "name": "Snickers",
-              "description": "",
-              "allergens": "",
-              "visible": true
-            },
-            {
-              "name": "Salzkaramell",
-              "description": "",
-              "allergens": "",
-              "visible": true
-            },
-            {
-              "name": "Cheesecake Royal",
-              "description": "",
-              "allergens": "",
-              "visible": true
-            },
-            {
-              "name": "Aphrodite",
-              "description": "",
-              "allergens": "",
-              "visible": true
-            },
-            {
-              "name": "Joghurt-Honig",
-              "description": "",
-              "allergens": "",
-              "visible": true
-            }
+            "Cookies",
+            "Nutella",
+            "Snickers",
+            "Salzkaramell",
+            "Cheesecake Royal",
+            "Aphrodite",
+            "Joghurt-Honig"
           ]
         }
       ],
-      "note_title": "",
-      "note": ""
+      "scoop_price": "2,30 €"
     }
   ]
 }

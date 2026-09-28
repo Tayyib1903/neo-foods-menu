@@ -1,0 +1,200 @@
+# NEO FOODS – Decap CMS
+# GitHub verlangt einen OAuth-Server für den Login.
+# Nach der Netlify-OAuth-Einrichtung unter backend ergänzen:
+#   site_domain: DEIN-NETLIFY-PROJEKT.netlify.app
+# Alternativ kann später ein eigener OAuth-Proxy oder Decap Turbo verwendet werden.
+
+backend:
+  name: github
+  repo: Tayyib1903/neo-foods-menu
+  branch: main
+media_folder: uploads
+public_folder: /neo-foods-menu/uploads
+site_url: https://tayyib1903.github.io/neo-foods-menu/
+display_url: https://tayyib1903.github.io/neo-foods-menu/
+logo_url: https://tayyib1903.github.io/neo-foods-menu/neo-logo.png
+locale: de
+publish_mode: simple
+editor:
+  preview: false
+collections:
+- name: menus
+  label: Karten
+  files:
+  - name: speisekarte
+    label: Speisekarte
+    file: content/speisekarte.json
+    format: json
+    fields:
+    - label: Interner Kartenname
+      name: menu_label
+      widget: hidden
+      default: SPEISEKARTE
+    - label: Titel
+      name: title
+      widget: hidden
+      default: Speisekarte
+    - label: Kategorien
+      name: categories
+      widget: list
+      summary: '{{fields.title}}'
+      fields:
+      - label: Kategorie
+        name: title
+        widget: string
+      - label: Untertitel
+        name: subtitle
+        widget: string
+        required: false
+      - label: Bild
+        name: image
+        widget: image
+        required: false
+      - label: Gruppen
+        name: groups
+        widget: list
+        summary: '{{fields.title}}'
+        fields:
+        - label: Gruppenname
+          name: title
+          widget: string
+        - label: Typ
+          name: type
+          widget: hidden
+          default: products
+        - label: Produkte
+          name: items
+          widget: list
+          summary: '{{fields.name}} – {{fields.price}}'
+          fields:
+          - label: Name
+            name: name
+            widget: string
+          - label: Preis
+            name: price
+            widget: string
+            hint: z. B. 5,90 € oder Coming soon
+          - label: Beschreibung
+            name: description
+            widget: text
+            required: false
+          - label: Allergene
+            name: allergens
+            widget: string
+            required: false
+            hint: z. B. A, C, G
+  - name: getraenkekarte
+    label: Getränkekarte
+    file: content/getraenkekarte.json
+    format: json
+    fields:
+    - label: Interner Kartenname
+      name: menu_label
+      widget: hidden
+      default: GETRÄNKEKARTE
+    - label: Titel
+      name: title
+      widget: hidden
+      default: Getränkekarte
+    - label: Kategorien
+      name: categories
+      widget: list
+      summary: '{{fields.title}}'
+      fields:
+      - label: Kategorie
+        name: title
+        widget: string
+      - label: Untertitel
+        name: subtitle
+        widget: string
+        required: false
+      - label: Bild
+        name: image
+        widget: image
+        required: false
+      - label: Gruppen
+        name: groups
+        widget: list
+        summary: '{{fields.title}}'
+        fields:
+        - label: Gruppenname
+          name: title
+          widget: string
+        - label: Typ
+          name: type
+          widget: hidden
+          default: products
+        - label: Produkte
+          name: items
+          widget: list
+          summary: '{{fields.name}} – {{fields.price}}'
+          fields:
+          - label: Name
+            name: name
+            widget: string
+          - label: Preis
+            name: price
+            widget: string
+            hint: z. B. 5,90 € oder Coming soon
+          - label: Beschreibung
+            name: description
+            widget: text
+            required: false
+          - label: Allergene
+            name: allergens
+            widget: string
+            required: false
+            hint: z. B. A, C, G
+  - name: eiskarte
+    label: Eiskarte
+    file: content/eiskarte.json
+    format: json
+    fields:
+    - label: Interner Kartenname
+      name: menu_label
+      widget: hidden
+      default: EISKARTE
+    - label: Titel
+      name: title
+      widget: hidden
+      default: Eiskarte
+    - label: Bereiche
+      name: categories
+      widget: list
+      max: 1
+      summary: '{{fields.title}}'
+      fields:
+      - label: Titel
+        name: title
+        widget: string
+      - label: Untertitel
+        name: subtitle
+        widget: string
+        required: false
+      - label: Bild
+        name: image
+        widget: image
+        required: false
+      - label: Preis pro Kugel
+        name: scoop_price
+        widget: string
+        hint: z. B. 2,30 €
+      - label: Sortengruppen
+        name: groups
+        widget: list
+        summary: '{{fields.title}}'
+        fields:
+        - label: Gruppenname
+          name: title
+          widget: string
+        - label: Typ
+          name: type
+          widget: hidden
+          default: flavors
+        - label: Sorten
+          name: items
+          widget: list
+          field:
+            label: Sorte
+            name: item
+            widget: string

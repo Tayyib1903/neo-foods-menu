@@ -1,671 +1,581 @@
 {
+  "menu_label": "GETRÄNKEKARTE",
   "title": "Getränkekarte",
-  "card_description": "Matcha, Kaffee,\nRefresher & Soft Drinks",
-  "pdf": "/neo-foods-menu/uploads/getraenkekarte.pdf",
-  "pdf_visible": true,
-  "sections": [
+  "categories": [
     {
       "title": "Matcha",
-      "tagline": "More than Matcha.",
-      "image": "/neo-foods-menu/uploads/matcha.webp",
-      "visible": true,
+      "subtitle": "More than Matcha.",
+      "image": "matcha.webp",
       "groups": [
         {
           "title": "Matcha-Favoriten",
+          "type": "products",
           "items": [
             {
               "name": "Matcha Latte",
-              "price": "5,20",
+              "price": "5,20 €",
               "description": "Milch und Matcha · warm oder kalt",
-              "allergens": "G",
-              "visible": true
+              "allergens": "G"
             },
             {
               "name": "Strawberry Matcha",
-              "price": "5,40",
+              "price": "5,40 €",
               "description": "Erdbeeren, Milch und Matcha · warm oder kalt",
-              "allergens": "G",
-              "visible": true
+              "allergens": "G"
             },
             {
               "name": "Rainbow Matcha",
-              "price": "5,90",
+              "price": "5,90 €",
               "description": "Erdbeeren, Mango, Blaubeeren, Milch und Matcha",
-              "allergens": "G",
-              "visible": true
+              "allergens": "G"
             }
           ]
         },
         {
           "title": "Fruchtig & nussig",
+          "type": "products",
           "items": [
             {
               "name": "Blueberry Matcha",
-              "price": "5,40",
+              "price": "5,40 €",
               "description": "Blaubeeren, Milch und Matcha",
-              "allergens": "G",
-              "visible": true
+              "allergens": "G"
             },
             {
               "name": "Pistachio Matcha",
-              "price": "5,40",
+              "price": "5,40 €",
               "description": "Pistazien, Kondensmilchcreme, Milch und Matcha",
-              "allergens": "G, H",
-              "visible": true
+              "allergens": "G, H"
             }
           ]
         }
-      ],
-      "note_title": "Milch nach deinem Geschmack",
-      "note": "Alle Matcha-Allergene oben gelten bei Zubereitung mit Kuhmilch. Milchoptionen: Sojadrink (F), Mandeldrink (H), Haferdrink (A), Kokosdrink sowie laktosefreie Milch (G). Die Allergene ändern sich mit der Milchwahl. Pistachio enthält durch Kondensmilchcreme und Pistazien weiterhin G und H. Weitere Allergene sind je nach verwendetem Produkt möglich."
+      ]
     },
     {
       "title": "Coffee",
-      "tagline": "Wiener Klassiker & neue Favoriten.",
-      "image": "/neo-foods-menu/uploads/coffee.webp",
-      "visible": true,
+      "subtitle": "Wiener Klassiker & neue Favoriten.",
+      "image": "coffee.webp",
       "groups": [
         {
           "title": "Wiener Kaffee",
+          "type": "products",
           "items": [
             {
               "name": "Espresso",
-              "price": "2,50",
+              "price": "2,50 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Großer Brauner",
-              "price": "3,80",
+              "price": "3,80 €",
               "description": "",
-              "allergens": "G",
-              "visible": true
+              "allergens": "G"
             },
             {
               "name": "Kleiner Brauner",
-              "price": "2,80",
+              "price": "2,80 €",
               "description": "",
-              "allergens": "G",
-              "visible": true
+              "allergens": "G"
             },
             {
               "name": "Ristretto",
-              "price": "2,50",
+              "price": "2,50 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Cortado",
-              "price": "3,70",
+              "price": "3,70 €",
               "description": "",
-              "allergens": "G",
-              "visible": true
+              "allergens": "G"
             },
             {
               "name": "Doppelespresso",
-              "price": "3,60",
+              "price": "3,60 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Verlängerter",
-              "price": "3,20",
+              "price": "3,20 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Americano",
-              "price": "3,20",
+              "price": "3,20 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Wiener Melange",
-              "price": "3,80",
+              "price": "3,80 €",
               "description": "",
-              "allergens": "G",
-              "visible": true
+              "allergens": "G"
             },
             {
               "name": "Cappuccino",
-              "price": "3,80",
+              "price": "3,80 €",
               "description": "",
-              "allergens": "G",
-              "visible": true
+              "allergens": "G"
             },
             {
               "name": "Espresso Macchiato",
-              "price": "2,80",
+              "price": "2,80 €",
               "description": "",
-              "allergens": "G",
-              "visible": true
+              "allergens": "G"
             },
             {
               "name": "Doppel Espresso Macchiato",
-              "price": "3,70",
+              "price": "3,70 €",
               "description": "",
-              "allergens": "G",
-              "visible": true
+              "allergens": "G"
             },
             {
               "name": "Latte Macchiato",
-              "price": "4,30",
+              "price": "4,30 €",
               "description": "",
-              "allergens": "G",
-              "visible": true
+              "allergens": "G"
             },
             {
               "name": "Caffè Latte",
-              "price": "4,30",
+              "price": "4,30 €",
               "description": "",
-              "allergens": "G",
-              "visible": true
+              "allergens": "G"
             },
             {
               "name": "Flat White",
-              "price": "4,70",
+              "price": "4,70 €",
               "description": "",
-              "allergens": "G",
-              "visible": true
+              "allergens": "G"
             },
             {
               "name": "Eis Americano",
-              "price": "3,20",
+              "price": "3,20 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Affogato",
-              "price": "4,10",
+              "price": "4,10 €",
               "description": "",
-              "allergens": "G",
-              "visible": true
+              "allergens": "G"
             },
             {
               "name": "Heiße Schokolade",
-              "price": "3,40",
+              "price": "3,40 €",
               "description": "",
-              "allergens": "G",
-              "visible": true
+              "allergens": "G"
             },
             {
               "name": "Milkshake",
-              "price": "4,50",
+              "price": "4,50 €",
               "description": "",
-              "allergens": "G",
-              "visible": true
+              "allergens": "G"
             }
           ]
         },
         {
           "title": "Specialty Coffee",
+          "type": "products",
           "items": [
             {
               "name": "Pistachio Latte",
-              "price": "5,40",
+              "price": "5,40 €",
               "description": "Espresso, Milch, Pistazien-Creme, Salted Cream",
-              "allergens": "G, H",
-              "visible": true
+              "allergens": "G, H"
             },
             {
               "name": "Mocha Kaffee",
-              "price": "5,20",
+              "price": "5,20 €",
               "description": "Schokolade und Kaffee",
-              "allergens": "G",
-              "visible": true
+              "allergens": "G"
             },
             {
               "name": "White Mocha",
-              "price": "5,20",
+              "price": "5,20 €",
               "description": "Weiße Schokolade mit Milch",
-              "allergens": "G",
-              "visible": true
+              "allergens": "G"
             },
             {
               "name": "Espressonic",
-              "price": "5,90",
+              "price": "5,90 €",
               "description": "Espresso mit Tonic",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             }
           ]
         },
         {
           "title": "Tee",
+          "type": "products",
           "items": [
             {
               "name": "Earl Grey",
-              "price": "3,70",
+              "price": "3,70 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Pfefferminz",
-              "price": "3,70",
+              "price": "3,70 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Grüner Tee",
-              "price": "3,70",
+              "price": "3,70 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Kräutertee",
-              "price": "3,70",
+              "price": "3,70 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             }
           ]
         }
-      ],
-      "note_title": "",
-      "note": ""
+      ]
     },
     {
       "title": "Refresher",
-      "tagline": "Fruchtig, frisch & mit Grüntee.",
-      "image": "/neo-foods-menu/uploads/refresh.webp",
-      "visible": true,
+      "subtitle": "Fruchtig, frisch & mit Grüntee.",
+      "image": "refresh.webp",
       "groups": [
         {
           "title": "Green Refresha",
+          "type": "products",
           "items": [
             {
               "name": "Slay Refresha",
-              "price": "4,60",
+              "price": "4,60 €",
               "description": "Himbeere, Limette, brauner Zucker, Grüntee, Wasser & Eis",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Hawaiian Refresha",
-              "price": "4,60",
+              "price": "4,60 €",
               "description": "Pfirsich, Limette, Grüntee, Wasser & Eis",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Beauty Refresha",
-              "price": "4,60",
+              "price": "4,60 €",
               "description": "Gurke, Petersilie, Limette, Grüntee, Wasser & Eis",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             }
           ]
         }
-      ],
-      "note_title": "",
-      "note": ""
+      ]
     },
     {
       "title": "Soft Drinks",
-      "tagline": "Wasser, Soda & prickelnde Klassiker.",
-      "image": "/neo-foods-menu/uploads/soft.webp",
-      "visible": true,
+      "subtitle": "Wasser, Soda & prickelnde Klassiker.",
+      "image": "soft.webp",
       "groups": [
         {
           "title": "Mineralwasser & Soda",
+          "type": "products",
           "items": [
             {
               "name": "Vöslauer Prickelnd · 0,33 l",
-              "price": "3,20",
+              "price": "3,20 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Vöslauer Ohne · 0,33 l",
-              "price": "3,20",
+              "price": "3,20 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Mineralwasser Sparkling · 0,33 l",
-              "price": "2,90",
+              "price": "2,90 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "LW Holunder · 0,3 l",
-              "price": "2,20",
+              "price": "2,20 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Apfelgespritzt",
-              "price": "3,90",
+              "price": "3,90 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Soda Wasser · 0,3 l",
-              "price": "2,50",
+              "price": "2,50 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Soda Zitrone · 0,3 l",
-              "price": "3,10",
+              "price": "3,10 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Soda Zitrone · 0,5 l",
-              "price": "3,90",
+              "price": "3,90 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Soda Himbeer · 0,3 l",
-              "price": "3,10",
+              "price": "3,10 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Soda Himbeer · 0,5 l",
-              "price": "3,90",
+              "price": "3,90 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Soda Holunder · 0,3 l",
-              "price": "3,10",
+              "price": "3,10 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Soda Holunder · 0,5 l",
-              "price": "3,90",
+              "price": "3,90 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             }
           ]
         },
         {
           "title": "Soft Drinks",
+          "type": "products",
           "items": [
             {
               "name": "Fritz-Kola Original · 0,33 l",
-              "price": "3,90",
+              "price": "3,90 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Fritz-Kola Zuckerfrei · 0,33 l",
-              "price": "3,90",
+              "price": "3,90 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Tirola Kola · 0,33 l",
-              "price": "3,80",
+              "price": "3,80 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Tirola Kola Leicht · 0,33 l",
-              "price": "3,80",
+              "price": "3,80 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Premium Cola · 0,33 l",
-              "price": "4,30",
+              "price": "4,30 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Almdudler · 0,35 l",
-              "price": "3,80",
+              "price": "3,80 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Almdudler Zuckerfrei · 0,35 l",
-              "price": "3,80",
+              "price": "3,80 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             }
           ]
         }
-      ],
-      "note_title": "",
-      "note": ""
+      ]
     },
     {
       "title": "Soft Drinks · Säfte & mehr",
-      "tagline": "Limo, Säfte, Tonics & Energy.",
-      "image": "/neo-foods-menu/uploads/juice.webp",
-      "visible": true,
+      "subtitle": "Limo, Säfte, Tonics & Energy.",
+      "image": "juice.webp",
       "groups": [
         {
           "title": "Fritz-Limo & Organic Sodas",
+          "type": "products",
           "items": [
             {
               "name": "Fritz Apfel-Kirsch-Holunder · 0,33 l",
-              "price": "3,90",
+              "price": "3,90 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Fritz Anjola Ananas & Limette bio · 0,33 l",
-              "price": "3,90",
+              "price": "3,90 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Fritz Ingwer-Limette · 0,33 l",
-              "price": "3,90",
+              "price": "3,90 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Fritz-Limo Mischmasch · 0,33 l",
-              "price": "3,70",
+              "price": "3,70 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "BOOTCH Kombucha · 0,33 l",
-              "price": "3,90",
+              "price": "3,90 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Pona · 0,33 l",
-              "price": "3,70",
+              "price": "3,70 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             }
           ]
         },
         {
           "title": "Tonics & Mixers",
+          "type": "products",
           "items": [
             {
               "name": "FT Indian Tonic · 0,20 l",
-              "price": "4,10",
+              "price": "4,10 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "FT Ginger Beer · 0,20 l",
-              "price": "4,10",
+              "price": "4,10 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "FT Pink Grapefruit · 0,20 l",
-              "price": "4,10",
+              "price": "4,10 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "FT Raspberry Rhubarb · 0,20 l",
-              "price": "4,10",
+              "price": "4,10 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             }
           ]
         },
         {
           "title": "Energy Drinks",
+          "type": "products",
           "items": [
             {
-              "name": "Red Bull Flasche · 0,25 l",
-              "price": "3,90",
-              "description": "",
-              "allergens": "",
-              "visible": true
-            },
-            {
               "name": "Red Bull Regular · 0,25 l",
-              "price": "3,90",
+              "price": "3,90 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Red Bull Sugarfree · 0,25 l",
-              "price": "3,90",
+              "price": "3,90 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Red Bull Zero · 0,25 l",
-              "price": "3,90",
+              "price": "3,90 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             }
           ]
         },
         {
           "title": "Ice Tea & Fruchtsäfte",
+          "type": "products",
           "items": [
             {
               "name": "Rauch Eistee Pfirsich · 0,33 l",
-              "price": "3,70",
+              "price": "3,70 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Rauch Eistee Zitrone · 0,33 l",
-              "price": "3,70",
+              "price": "3,70 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "FJ Rauch Eistee Zitrone · 0,33 l",
-              "price": "3,80",
+              "price": "3,80 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "FJ Rauch Eistee Pfirsich · 0,33 l",
-              "price": "3,80",
+              "price": "3,80 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "FJ Rauch Eistee Granatapfel · 0,33 l",
-              "price": "3,80",
+              "price": "3,80 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "FJ Rauch Eistee Grüntee · 0,33 l",
-              "price": "3,80",
+              "price": "3,80 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "FJ Rauch Apfel Bio · 0,33 l",
-              "price": "3,80",
+              "price": "3,80 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "FJ Rauch Rhabarber Bio · 0,33 l",
-              "price": "3,80",
+              "price": "3,80 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "FJ Rauch Maracuja Bio · 0,33 l",
-              "price": "3,80",
+              "price": "3,80 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "FJ Rauch Johannisbeere Bio · 0,33 l",
-              "price": "3,80",
+              "price": "3,80 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             },
             {
               "name": "Rauch Fruchtsaft · 0,2 l",
-              "price": "2,70",
+              "price": "2,70 €",
               "description": "",
-              "allergens": "",
-              "visible": true
+              "allergens": ""
             }
           ]
         }
-      ],
-      "note_title": "",
-      "note": ""
+      ]
     }
   ]
 }
