@@ -2,9 +2,8 @@
 
 backend:
   name: turbo-github
-  turbo_site_id: 812a2794-5b52-4256-8a27-9a5816f456b3
+  turbo_site_id: c3dcb1f6-4ab7-40d5-b548-81677770644a
   branch: main
-  site_domain: neofoodvienna.netlify.app
 media_folder: uploads
 public_folder: /neo-foods-menu/uploads
 site_url: https://tayyib1903.github.io/neo-foods-menu/
