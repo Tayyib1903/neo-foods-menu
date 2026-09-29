@@ -4,7 +4,7 @@ backend:
   name: github
   repo: Tayyib1903/neo-foods-menu
   branch: main
-  site_domain: fluffy-bavarois-760f45.netlify.app
+  site_domain: neofoodvienna.netlify.app
 media_folder: uploads
 public_folder: /neo-foods-menu/uploads
 site_url: https://tayyib1903.github.io/neo-foods-menu/
